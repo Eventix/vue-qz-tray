@@ -1,13 +1,17 @@
 {
-  "name": "vue-qz-tray",
+  "name": "@eventix/vue-qz-tray",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name vue-qz-tray ./src/components/entry.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "./dist/vue-qz-tray.common.js",
   "dependencies": {
+    "js-sha256": "^0.9.0",
+    "qz-tray": "^2.0.9-1",
     "vue": "^2.6.6"
   },
   "devDependencies": {
@@ -21,8 +25,15 @@
     "less-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.21"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "eslintConfig": {
-    "root": true,
+    "root": false,
     "env": {
       "node": true
     },
@@ -30,7 +41,23 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": ["error", {"allow": ["error", "warn"]}],
+      "no-debugger": "error",
+      "indent": ["warn", 4],
+      "semi": ["error", "always"],
+      "vue/script-indent": ["warn", 4, {"baseIndent": 1}],
+      "object-curly-spacing": ["warn", "never"],
+      "space-before-function-paren": ["error", {"anonymous": "never", "named": "always", "asyncArrow": "always"}]
+    },
+    "overrides": [
+      {
+        "files": ["*.vue"],
+        "rules": {
+          "indent": "off"
+        }
+      }
+    ],
     "parserOptions": {
       "parser": "babel-eslint"
     }
