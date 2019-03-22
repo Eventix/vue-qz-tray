@@ -59,7 +59,8 @@
                             :loading="loading">
                         <ul>
                             <li class="vue-qz-tray--printers--list-item"
-                                    v-for="printer in printers">
+                                    v-for="printer in printers"
+                                    :key="printer">
                                 <a class="vue-qz-tray--printers--printer--link"
                                         :class="{selected: selectedPrinter === printer}"
                                         @click="pickPrinter(printer)">
