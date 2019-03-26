@@ -7,6 +7,7 @@ import VueQzTrayFormNested from './vue-qz-tray-form-nested.vue';
 import VueQzTrayInput from './vue-qz-tray-input.vue';
 import VueQzTrayOptions from './vue-qz-tray-options.vue';
 import VueQzTrayPrinters from './vue-qz-tray-printers.vue';
+import VueQzTrayInputIframe from './vue-qz-tray-input-iframe.vue';
 
 const Components = {
     VueQzTray,
@@ -16,7 +17,8 @@ const Components = {
     VueQzTrayFormNested,
     VueQzTrayInput,
     VueQzTrayOptions,
-    VueQzTrayPrinters
+    VueQzTrayPrinters,
+    VueQzTrayInputIframe
 };
 
 Object.keys(Components).forEach(name => {

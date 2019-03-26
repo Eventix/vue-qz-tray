@@ -22,7 +22,7 @@
         <div class="vue-qz-tray--input--data--wrapper"
                 v-if="!hideBody">
             <slot name="pages"
-                    :data="pages">
+                    :pages="pages">
                 <div class="vue-qz-tray--input--data">
                     <vue-qz-tray-input-iframe
                             v-for="(page, index) in pages"
