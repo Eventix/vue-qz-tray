@@ -262,7 +262,7 @@
             if (this.$qz.websocket.isActive()) {
                 this.connected = true;
             } else {
-                this.launch();
+                this.connect();
             }
         }
     };
