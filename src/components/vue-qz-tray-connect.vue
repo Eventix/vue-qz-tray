@@ -133,12 +133,6 @@
                     return;
                 }
 
-                if (this.loading || this.$qz.websocket.isActive()) {
-                    this.$emitLocalAndRoot('connection-exists-warning');
-
-                    return;
-                }
-
                 window.location.assign("qz:launch");
 
                 this.connect();
