@@ -17,7 +17,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
-    "@vue/cli-service": "^3.5.0",
+    "@vue/cli-service": "^3.8.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -42,17 +42,49 @@
       "eslint:recommended"
     ],
     "rules": {
-      "no-console": ["error", {"allow": ["error", "warn"]}],
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "error",
+            "warn"
+          ]
+        }
+      ],
       "no-debugger": "error",
-      "indent": ["warn", 4],
-      "semi": ["error", "always"],
-      "vue/script-indent": ["warn", 4, {"baseIndent": 1}],
-      "object-curly-spacing": ["warn", "never"],
-      "space-before-function-paren": ["error", {"anonymous": "never", "named": "always", "asyncArrow": "always"}]
+      "indent": [
+        "warn",
+        4
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "vue/script-indent": [
+        "warn",
+        4,
+        {
+          "baseIndent": 1
+        }
+      ],
+      "object-curly-spacing": [
+        "warn",
+        "never"
+      ],
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "never",
+          "named": "always",
+          "asyncArrow": "always"
+        }
+      ]
     },
     "overrides": [
       {
-        "files": ["*.vue"],
+        "files": [
+          "*.vue"
+        ],
         "rules": {
           "indent": "off"
         }
